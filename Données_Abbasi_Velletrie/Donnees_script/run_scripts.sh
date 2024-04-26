@@ -10,10 +10,18 @@ for script in *.py; do
         # Récupérer le nom du fichier sans l'extension
         filename=$(basename -- "$script")
         filename_without_extension="${filename%.*}"
-        # Exécuter le script Python et rediriger la sortie vers un fichier SQL dans output_sql
-        python3 "$script" > "output_sql/${filename_without_extension}.sql"
-        echo "Le fichier SQL ${filename_without_extension}.sql a été généré dans output_sql."
+        # Exécuter le script Python
+        python3 "$script"
     fi
 done
 
-echo "Tous les scripts Python ont été exécutés et leurs sorties ont été enregistrées dans output_sql."
+# Parcourir tous les fichiers SQL dans le répertoire de travail
+for sql_file in *.sql; do
+    # Vérifier si le fichier est un fichier SQL
+    if [[ -f "$sql_file" && "${sql_file: -4}" == ".sql" ]]; then
+        # Déplacer le fichier SQL dans le dossier de sortie
+        mv "$sql_file" output_sql/
+    fi
+done
+
+echo "Tous les scripts Python ont été exécutés et les fichiers SQL ont été déplacés dans output_sql."
