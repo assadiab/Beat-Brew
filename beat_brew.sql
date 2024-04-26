@@ -1060,7 +1060,7 @@ INSERT INTO Personne (Personne_ID, Age, Genre, Nationnalite) VALUES
 (2, 67, 'M', 'Tuvalu'),
 (3, 50, 'M', 'Azerbaijan'),
 (4, 74, 'M', 'Christmas Island'),
-(5, 52, 'M', 'Lao People's Democratic Republic'),
+(5, 52, 'M', 'Lao Peoples Democratic Republic'),
 (6, 63, 'M', 'Sri Lanka'),
 (7, 18, 'F', 'Niue'),
 (8, 61, 'M', 'Sri Lanka'),
@@ -2233,6 +2233,7 @@ INSERT INTO Historique (Historique_ID, Type, Date) VALUES
 (300, 'Suppression', '2021-04-25');
 
 -- Tag_Concert
+
 INSERT INTO Tag_Concert (Tag_Id, Concert_ID) VALUES
 (18, 45),
 (27, 10),
