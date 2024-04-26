@@ -17,4 +17,3 @@ for script in *.py; do
 done
 
 echo "Tous les scripts Python ont été exécutés et leurs sorties ont été enregistrées dans output_sql."
-
