@@ -1,3 +1,10 @@
+"""
+Nom du fichier : add_data.py
+Description : Ce script ajoute les données de fichiers SQL dans un fichier de sortie spécifié. 
+Auteur : Assa DIABIRA
+Dernière modification : 27/04/2024
+"""
+
 import os
 import sys
 
@@ -42,8 +49,6 @@ def add_sql_data_to_file(input_folder, output_file):
 
                         # Ajouter le contenu du fichier SQL au fichier de sortie
                         output_sql_file.writelines(lines)
-
-                        print("Les données du fichier {} ont été ajoutées à {}.".format(sql_file, output_file))
                 else:
                     print("Le fichier {} est vide, aucune donnée à ajouter.".format(sql_file))
 
@@ -52,7 +57,7 @@ def add_sql_data_to_file(input_folder, output_file):
 if __name__ == "__main__":
     # Vérifier si le nombre d'arguments est correct
     if len(sys.argv) != 3:
-        print("Utilisation: python add_sql_data_to_file.py <dossier_contenant_fichiers_sql> <fichier_sql_sortie>")
+        print("Utilisation: python add_sql_data_to_file.py <dossier_contenant_fichiers_sql> <fichier_sortie>")
         sys.exit(1)
 
     # Récupérer les noms des dossiers et fichiers en ligne de commande
