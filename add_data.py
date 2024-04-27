@@ -72,3 +72,4 @@ if __name__ == "__main__":
     # Appeler la fonction pour ajouter les données SQL au fichier de sortie
     add_sql_data_to_file(input_folder, output_file)
 
+
